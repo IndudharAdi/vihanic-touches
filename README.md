@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ Vihanic Touches
 
-## Getting Started
+A modern e-commerce web application built with cutting-edge technologies. Shop seamlessly, even offline, with our Progressive Web App (PWA) capabilities.
 
-First, run the development server:
+## What's This Project About?
+
+This is a full-featured online store where customers can browse products, add items to their cart, and complete purchases using Stripe payments. The app works offline too, so you never lose your shopping experience!
+
+## ✨ Features
+
+- **Product Catalog** - Browse beautiful product listings with images and descriptions
+- **Shopping Cart** - Add, remove, and adjust quantities with ease
+- **Secure Checkout** - Payment processing powered by Stripe
+- **Offline Support** - Works even without internet connection (PWA)
+- **Real-time Inventory** - Track product availability
+- **Responsive Design** - Looks great on mobile, tablet, and desktop
+
+## 🚀 Tech Stack
+
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe code
+- **Prisma** - Database ORM for PostgreSQL
+- **Stripe** - Payment processing
+- **Tailwind CSS** - Modern styling
+- **Zustand** - State management
+- **PWA** - Progressive Web App capabilities
+
+## 📋 Prerequisites
+
+Before you start, make sure you have:
+
+- Node.js (v18 or higher)
+- A PostgreSQL database (free options: [Neon](https://neon.tech), [Supabase](https://supabase.com))
+- A Stripe account for payments (free test mode: [Stripe Dashboard](https://dashboard.stripe.com))
+
+## 🛠️ Getting Started
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Set Up Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+# Database
+DATABASE_URL="postgresql://username:password@localhost:5432/vihanic_touches?schema=public"
+
+# Stripe (get from https://dashboard.stripe.com/test/apikeys)
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_test_..."
+STRIPE_SECRET_KEY="sk_test_..."
+```
+
+### 3. Set Up the Database
+
+```bash
+npx prisma generate
+npx prisma db push
+npm run seed
+```
+
+### 4. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser. Happy shopping! 🎉
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm start` - Run production server
+- `npm run lint` - Check code quality
+- `npm run prisma:studio` - Open Prisma Studio (database GUI)
+- `npm run seed` - Populate database with sample products
 
-## Learn More
+## 🗂️ Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── src/
+│   ├── app/              # Next.js pages and API routes
+│   ├── components/       # Reusable React components
+│   ├── lib/             # Utility functions
+│   └── stores/          # State management
+├── prisma/
+│   ├── schema.prisma    # Database schema
+│   └── seed.ts          # Sample data
+└── public/              # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Feel free to fork this project and make it your own! If you find any bugs or have suggestions, please open an issue.
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is open source and available under the MIT License.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Developed By Indudhar Adi
